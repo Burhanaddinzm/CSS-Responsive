@@ -1,0 +1,366 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  height: 253vh;
+}
+
+.container {
+  width: calc(100% - 34px);
+  margin: 0 auto;
+}
+
+.profile {
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+  margin-top: 12px;
+  padding: 18px 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-info {
+  display: flex;
+  gap: 16px;
+}
+
+.profile-info .profile-pic {
+  width: 64px;
+  height: 64px;
+  border-radius: 64px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.profile-info .profile-pic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.profile-info .profile-desc {
+  display: flex;
+  flex-direction: column;
+  width: 284px;
+  gap: 2px;
+}
+
+.profile-info .profile-desc h2 {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.profile-info .profile-desc p {
+  color: #4b5563;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.profile-info .profile-desc p span {
+  color: #000;
+}
+
+.profile .btn-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 16px;
+  width: 100%;
+  gap: 10px;
+}
+
+.profile .btn-container button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 0;
+  border-radius: 6px;
+  border: none;
+  font-family: "Inter", sans-serif;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.profile .btn-container .dark {
+  color: #fff;
+  background-color: #4f46e5;
+}
+
+.profile .btn-container .light {
+  background-color: #fff;
+  border: 1px solid #d1d5db;
+  color: #000;
+}
+
+@media screen and (min-width: 834px) {
+  .profile .btn-container {
+    width: auto;
+    flex-direction: row;
+    gap: 16px;
+    margin-top: 18px;
+  }
+  .profile .btn-container button {
+    padding: 0.5rem 1rem;
+  }
+  .profile-info .profile-desc {
+    width: auto;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1280px;
+  }
+  .profile {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 40px 0;
+    padding: 18px 40px;
+  }
+  .profile .btn-container {
+    margin: 0;
+  }
+
+  .profile .btn-container .light {
+    order: -1;
+  }
+
+  .profile-info .profile-desc {
+    gap: 0;
+    justify-content: center;
+  }
+}
+
+/* ---------------------------------------------------------- */
+
+.user {
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+  background-color: #fff;
+  margin-top: 27px;
+  margin-bottom: 40px;
+  padding-top: 1.5rem;
+}
+
+.user-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+.user-info .user-pic {
+  width: 80px;
+  height: 80px;
+  overflow: hidden;
+  border-radius: 80px;
+}
+
+.user-info .user-pic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.user-info .user-desc {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 5px;
+}
+
+.user-info .user-desc p {
+  color: #4b5563;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.user-info .user-desc h2 {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.user button {
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+  background-color: #fff;
+  padding: 0.5rem 1rem;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.user .days-off {
+  margin-top: 17px;
+  display: grid;
+  grid-template-rows: repeat(3, 50px);
+}
+
+.user .days-off div {
+  padding: 1rem;
+  border: 1px solid #d1d5db;
+  background-color: #f9fafb;
+  color: #4b5563;
+  font-size: 14px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (min-width: 834px) {
+  .user {
+    padding: 0;
+    margin: 40px 0;
+  }
+
+  .user-container {
+    padding: 24px 40px 0 18px;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .user-info {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .user-info .user-desc {
+    text-align: start;
+  }
+
+  .user .days-off {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 100px;
+    margin-top: 24px;
+  }
+  .user .days-off div {
+    padding: 42px 0;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .user {
+    margin-bottom: 27px;
+  }
+}
+
+/* ----------------------------------------------------------- */
+
+.projects {
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+  background-color: #f9fafb;
+  padding: 24px;
+}
+
+.projects h4 {
+  color: #4b5563;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.card-container {
+  margin-top: 17px;
+  display: grid;
+  grid-template-rows: repeat(4, 64px);
+  gap: 10px;
+}
+
+.card-container .card {
+  width: 100%;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+  padding-right: 1rem;
+}
+
+.card .card-initials {
+  width: 64px;
+  height: 64px;
+  background: #da2877;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-container .card-info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.card-container .card-desc {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.card-container .card-desc h5 {
+  color: #4b5563;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.card-container .card-desc p {
+  color: #6b7280;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.card.cd .card-initials {
+  background-color: #9333e9;
+}
+
+.card.t .card-initials {
+  background-color: #eab305;
+}
+
+.card.rcd .card-initials {
+  background-color: #21c55d;
+}
+
+@media screen and (min-width: 834px) {
+  .projects {
+    padding: 48px 24px;
+  }
+
+  .card-container {
+    margin-top: 15px;
+    gap: 20px;
+    grid-template-columns: repeat(2, 2fr);
+    grid-template-rows: repeat(2, 64px);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .projects {
+    padding: 48px;
+  }
+  .card-container {
+    grid-template-columns: repeat(4, 2fr);
+    grid-template-rows: 64px;
+  }
+}
